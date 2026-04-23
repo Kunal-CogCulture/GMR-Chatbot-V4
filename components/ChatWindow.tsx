@@ -20,14 +20,6 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
   const bottomRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  // Check if lead info already exists in this session
-  useEffect(() => {
-    const savedLead = sessionStorage.getItem("aerobot_lead_info");
-    if (savedLead) {
-      setShowLeadForm(false);
-    }
-  }, []);
-
   // Auto-scroll to latest message
   useEffect(() => {
     if (!showLeadForm) {
@@ -54,7 +46,6 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
   const handleLeadSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (leadData.name && leadData.email && leadData.phone) {
-      sessionStorage.setItem("aerobot_lead_info", JSON.stringify(leadData));
       setShowLeadForm(false);
       // Optional: Send lead to backend here
     }
