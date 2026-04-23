@@ -12,14 +12,18 @@ export default function ChatHeader({ onClose, onMinimize }: ChatHeaderProps) {
       <div className="max-w-3xl mx-auto flex items-center justify-between w-full">
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <div className="relative w-9 h-9 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
-            <span className="text-lg">✈️</span>
+          <div className="relative w-10 h-10 rounded-full bg-white flex items-center justify-center p-1.5 border border-white/20 shadow-sm">
+            <img 
+              src="https://www.gmraerocity.com/wp-content/themes/gmr-aerocity/images/gmr-aerocity.svg" 
+              alt="GMR Aerocity" 
+              className="w-full h-full object-contain"
+            />
             {/* Online indicator */}
             <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2 border-[#1A3557]" />
           </div>
           <div>
-            <p className="text-white font-semibold text-sm leading-tight">AeroBot</p>
-            <p className="text-white/60 text-xs">GMR Aerocity Concierge</p>
+            <p className="text-white font-bold text-sm leading-tight tracking-wide">Aero AI Concierge</p>
+            <p className="text-white/60 text-[10px] uppercase tracking-widest font-medium">Official Digital Assistant</p>
           </div>
         </div>
 

@@ -70,10 +70,14 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
         <div className="flex-1 flex items-center justify-center p-4 bg-white/80 backdrop-blur-sm overflow-y-auto">
           <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-gray-100 p-6 my-auto">
             <div className="text-center mb-6">
-              <div className="w-12 h-12 mx-auto bg-[#1A3557] rounded-xl flex items-center justify-center mb-3 shadow-lg rotate-3">
-                <span className="text-2xl">✈️</span>
+              <div className="w-12 h-12 mx-auto bg-white rounded-xl flex items-center justify-center mb-3 shadow-lg rotate-3 p-2">
+                <img 
+                  src="https://www.gmraerocity.com/wp-content/themes/gmr-aerocity/images/gmr-aerocity.svg" 
+                  alt="GMR Aerocity" 
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <h2 className="text-xl font-bold text-[#1A3557]">Welcome to AeroBot</h2>
+              <h2 className="text-xl font-bold text-[#1A3557]">Welcome to Aero AI Concierge</h2>
               <p className="text-gray-500 mt-1 text-xs">Please share your details to begin.</p>
             </div>
 
@@ -128,11 +132,15 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
             <div className="max-w-3xl mx-auto px-4 pt-4 w-full">
               {messages.length === 0 && (
                 <div className="text-center py-12">
-                  <div className="w-20 h-20 mx-auto bg-[#1A3557]/10 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-4xl">✈️</span>
+                  <div className="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center mb-4 p-4 shadow-sm border border-gray-50">
+                    <img 
+                      src="https://www.gmraerocity.com/wp-content/themes/gmr-aerocity/images/gmr-aerocity.svg" 
+                      alt="GMR Aerocity" 
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <p className="text-xl text-gray-700 font-semibold">Hello! I'm AeroBot</p>
-                  <p className="text-gray-400 mt-2">Your GMR Aerocity concierge. How can I help you today?</p>
+                  <p className="text-xl text-gray-700 font-semibold">Hello! I'm your Aero AI Concierge</p>
+                  <p className="text-gray-400 mt-2">Your official GMR Aerocity assistant. How can I help you today?</p>
                 </div>
               )}
 
