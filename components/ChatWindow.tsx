@@ -39,7 +39,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
   const handleSend = () => {
     const trimmed = input.trim();
     if (!trimmed || isLoading) return;
-    sendMessage(trimmed);
+    sendMessage(trimmed, leadData.name); // Pass the name
     setInput("");
   };
 
@@ -77,7 +77,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h2 className="text-xl font-bold text-[#1A3557]">Welcome to Aero AI Concierge</h2>
+              <h2 className="text-xl font-bold text-[#1A3557]">Welcome to AeroAI Concierge</h2>
               <p className="text-gray-500 mt-1 text-xs">Please share your details to begin.</p>
             </div>
 
@@ -139,7 +139,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <p className="text-xl text-gray-700 font-semibold">Hello! I'm your Aero AI Concierge</p>
+                  <p className="text-xl text-gray-700 font-semibold">Hello {leadData.name.split(' ')[0]}! I'm your AeroAI Concierge</p>
                   <p className="text-gray-400 mt-2">Your official GMR Aerocity assistant. How can I help you today?</p>
                 </div>
               )}
@@ -157,7 +157,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
           {showSuggestions && (
             <div className="max-w-3xl mx-auto w-full">
               <SuggestionChips onSelect={(text) => { 
-                sendMessage(text); 
+                sendMessage(text, leadData.name); // Pass the name
                 setInput(""); // Ensure input is cleared
               }} />
             </div>
@@ -194,7 +194,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
                   </button>
                 </div>
               </div>
-              <p className="text-center text-xs text-gray-300 mt-4">Powered by GMR Aerocity × Aero AI Concierge</p>
+              <p className="text-center text-xs text-gray-300 mt-4">Powered by GMR Aerocity × AeroAI Concierge</p>
             </div>
           </div>
         </>

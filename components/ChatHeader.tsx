@@ -22,7 +22,7 @@ export default function ChatHeader({ onClose, onMinimize }: ChatHeaderProps) {
             <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border-2 border-[#1A3557]" />
           </div>
           <div>
-            <p className="text-white font-bold text-sm leading-tight tracking-wide">Aero AI Concierge</p>
+            <p className="text-white font-bold text-sm leading-tight tracking-wide">AeroAI Concierge</p>
             <p className="text-white/60 text-[10px] uppercase tracking-widest font-medium">Official Digital Assistant</p>
           </div>
         </div>

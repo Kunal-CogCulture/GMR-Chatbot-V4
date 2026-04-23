@@ -14,7 +14,7 @@ export default function Home() {
 
         <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-xs font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          Live — Aero AI Concierge is online
+          Live — AeroAI Concierge is online
         </div>
         <h1 className="text-5xl font-bold text-white leading-tight mb-4">
           GMR Aerocity<br />
@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* Arrow pointing to widget */}
       <div className="fixed bottom-24 right-5 flex flex-col items-end gap-1 pointer-events-none">
-        <p className="text-white/60 text-xs bg-[#1A3557]/80 px-2 py-1 rounded-lg backdrop-blur-sm">Chat with Aero AI Concierge →</p>
+        <p className="text-white/60 text-xs bg-[#1A3557]/80 px-2 py-1 rounded-lg backdrop-blur-sm">Chat with AeroAI Concierge →</p>
       </div>
     </main>
   );

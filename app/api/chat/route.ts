@@ -3,7 +3,7 @@ import { retrieveContext } from "@/lib/retriever";
 
 const MISTRAL_API_KEY = process.env.MISTRAL_API_KEY!;
 
-const SYSTEM_PROMPT = `You are Aero AI Concierge, the official intelligent assistant for GMR Aerocity Delhi — India's premier Global Business District located at Indira Gandhi International Airport. You assist visitors, business travelers, guests, and tenants with everything related to GMR Aerocity.
+const SYSTEM_PROMPT = `You are AeroAI Concierge, the official intelligent assistant for GMR Aerocity Delhi — India's premier Global Business District located at Indira Gandhi International Airport. You assist visitors, business travelers, guests, and tenants with everything related to GMR Aerocity.
 
 PERSONALITY & OBJECTIVE:
 - Warm, professional, and knowledgeable — like a world-class concierge
@@ -49,7 +49,7 @@ BOUNDARIES:
 
 export async function POST(req: NextRequest) {
   try {
-    const { messages } = await req.json();
+    const { messages, userName } = await req.json();
 
     // 1. Get the latest user message
     const latestUserMessage = messages[messages.length - 1]?.content || "";
@@ -71,7 +71,12 @@ export async function POST(req: NextRequest) {
       console.warn("Context retrieval failed, proceeding without RAG context:", err);
     }
 
-    const fullSystemPrompt = SYSTEM_PROMPT + contextBlock;
+    // Personalize prompt if name is provided
+    const personalizedPrompt = userName 
+      ? `${SYSTEM_PROMPT}\n\nThe user's name is ${userName}. Please greet them personally in your first response.`
+      : SYSTEM_PROMPT;
+
+    const fullSystemPrompt = personalizedPrompt + contextBlock;
 
     // 3. Call Mistral API with streaming
     const mistralResponse = await fetch("https://api.mistral.ai/v1/chat/completions", {

@@ -13,7 +13,7 @@ export function useChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [sessionId] = useState(nanoid());
 
-  const sendMessage = useCallback(async (content: string) => {
+  const sendMessage = useCallback(async (content: string, userName?: string) => {
     if (!content.trim()) return;
 
     const userMessage: Message = {
@@ -33,6 +33,7 @@ export function useChat() {
         body: JSON.stringify({
           messages: [...messages, userMessage].map(m => ({ role: m.role, content: m.content })),
           sessionId,
+          userName,
         }),
       });
 
