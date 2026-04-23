@@ -51,7 +51,7 @@ export default function ChatWidget() {
             className="flex items-center gap-2 bg-[#1A3557] text-white px-4 py-2 rounded-full shadow-xl cursor-pointer hover:bg-[#2a4f7a] transition-colors"
             onClick={handleOpen}
           >
-            <span className="text-sm font-medium">AeroBot</span>
+            <span className="text-sm font-medium">Aero AI Concierge</span>
             <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           </motion.div>
         )}
@@ -63,8 +63,8 @@ export default function ChatWidget() {
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         className="relative w-14 h-14 rounded-full bg-[#1A3557] shadow-xl flex items-center justify-center text-white hover:bg-[#2a4f7a] transition-colors"
-        aria-label={isOpen ? "Close chat" : "Open chat with AeroBot"}
-        title={isOpen ? "Close chat" : "Chat with AeroBot"}
+        aria-label={isOpen ? "Close chat" : "Open chat with Aero AI Concierge"}
+        title={isOpen ? "Close chat" : "Chat with Aero AI Concierge"}
       >
         {/* Pulse ring — only when closed */}
         {!isOpen && (

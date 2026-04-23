@@ -2,10 +2,19 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-[#0f2440] via-[#1A3557] to-[#0f2440] p-8">
       {/* Hero Section */}
-      <div className="text-center max-w-2xl">
+      <div className="text-center max-w-2xl flex flex-col items-center">
+        {/* Logo Container */}
+        <div className="w-24 h-24 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-2xl p-4 rotate-1 hover:rotate-0 transition-transform">
+          <img 
+            src="https://www.gmraerocity.com/wp-content/themes/gmr-aerocity/images/gmr-aerocity.svg" 
+            alt="GMR Aerocity" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+
         <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-xs font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          Live — AeroBot is online
+          Live — Aero AI Concierge is online
         </div>
         <h1 className="text-5xl font-bold text-white leading-tight mb-4">
           GMR Aerocity<br />
@@ -23,7 +32,7 @@ export default function Home() {
 
       {/* Arrow pointing to widget */}
       <div className="fixed bottom-24 right-5 flex flex-col items-end gap-1 pointer-events-none">
-        <p className="text-white/60 text-xs bg-[#1A3557]/80 px-2 py-1 rounded-lg backdrop-blur-sm">Chat with AeroBot →</p>
+        <p className="text-white/60 text-xs bg-[#1A3557]/80 px-2 py-1 rounded-lg backdrop-blur-sm">Chat with Aero AI Concierge →</p>
       </div>
     </main>
   );

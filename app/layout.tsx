@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "GMR Aerocity Smart Assistant | AeroBot",
-  description: "Official intelligent concierge assistant for GMR Aerocity Delhi — India's premier Global Business District.",
+  title: "Aero AI Concierge | GMR Aerocity Smart Assistant",
+  description: "You are Aero AI Concierge, the official intelligent assistant for GMR Aerocity Delhi — India's premier Global Business District located at Indira Gandhi International Airport. You assist visitors, business travelers, guests, and tenants with everything related to GMR Aerocity.",
 };
 
 export default function RootLayout({
@@ -24,6 +24,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} font-sans`}>
         {children}
         <ChatWidget />
+        <p className="text-center text-xs text-gray-300 mt-4">Powered by GMR Aerocity × Aero AI Concierge</p>
       </body>
     </html>
   );

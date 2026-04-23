@@ -194,7 +194,7 @@ export default function ChatWindow({ onClose, onMinimize }: ChatWindowProps) {
                   </button>
                 </div>
               </div>
-              <p className="text-center text-xs text-gray-300 mt-4">Powered by GMR Aerocity × AeroBot</p>
+              <p className="text-center text-xs text-gray-300 mt-4">Powered by GMR Aerocity × Aero AI Concierge</p>
             </div>
           </div>
         </>
