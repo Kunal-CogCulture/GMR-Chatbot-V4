@@ -1,12 +1,12 @@
 "use client";
 
 const SUGGESTIONS = [
-  { icon: "🏨", text: "Hotels near the airport" },
-  { icon: "🍽️", text: "Best restaurants for dinner" },
-  { icon: "💼", text: "Book a meeting room" },
-  { icon: "🎉", text: "Upcoming events" },
-  { icon: "🚗", text: "Parking information" },
-  { icon: "📍", text: "Plan my visit" },
+  { icon: "🏨", text: "Suggest me some hotels near IGI airport" },
+  { icon: "🍽️", text: "What are the best restaurants for dinner" },
+  { icon: "💼", text: "I want to book a conference room for 100 people" },
+  { icon: "🎉", text: "What are the most exciting upcoming events in Delhi ?" },
+  { icon: "🚗", text: "Where can i get the parking facilities near IGI airport" },
+  { icon: "📍", text: "Plan a 2 days itinerary for me in Delhi" },
 ];
 
 interface SuggestionChipsProps {
